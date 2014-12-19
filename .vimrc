@@ -7,29 +7,11 @@ syntax on
 " 256 Colors
 set t_Co=256
 
-" theme
-try
-  colorscheme harlequin
-catch
-  colorscheme torte 
-endtry
-
 " some cyrillic mappings
 set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi
 
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-" enable modeline
-set modeline
-
-" Highlight col 80+
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
-
-" set whitespace chars
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
@@ -46,7 +28,23 @@ Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" theme
+try
+  colorscheme harlequin
+endtry
 
 " open Nerd Tree with F2
 map <F2> :NERDTreeToggle<CR>
 
+" enable modeline
+set modeline
+
+" Highlight col 80+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+" set whitespace chars
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+" Always show airline
+set laststatus=2

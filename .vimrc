@@ -1,9 +1,6 @@
 set nocompatible
 filetype off
 
-" Enable syntax highlight
-syntax on
-
 " 256 Colors
 set t_Co=256
 
@@ -23,6 +20,7 @@ Plugin 'git://github.com/nielsmadan/harlequin.git'
 Plugin 'git://github.com/editorconfig/editorconfig-vim.git'
 Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
+" Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,3 +46,8 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " Always show airline
 set laststatus=2
+
+" Enable syntax highlight
+syntax on
+
+

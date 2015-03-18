@@ -9,8 +9,8 @@
 #idle_time			10:00
 #sleep_time			30:00
 
-break				60:00	2:00	2:00	
-break				5:00	0:10	0:00	
+break				60:00	1:00	5:00
+break				10:00	0:20	0:00
 
 # Example settings. They are not default.
 

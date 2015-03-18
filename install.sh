@@ -19,7 +19,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Install all Vim plugins
 vim +PluginInstall +qall
 
-# Pokoy config
+# Pokoy https://github.com/ttygde/pokoy
 if [ ! -d "$POKOY_CONFIG" ]; then
 	mkdir -p "$POKOY_CONFIG"
 fi

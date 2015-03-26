@@ -20,7 +20,9 @@ Plugin 'git://github.com/nielsmadan/harlequin.git'
 Plugin 'git://github.com/editorconfig/editorconfig-vim.git'
 Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
-" Plugin 'fatih/vim-go'
+Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
+Bundle 'zah/nimrod.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,6 +32,10 @@ filetype plugin indent on    " required
 try
   colorscheme harlequin
 endtry
+
+" open ctrlp with .. Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " open Nerd Tree with F2
 map <F2> :NERDTreeToggle<CR>
@@ -50,4 +56,10 @@ set laststatus=2
 " Enable syntax highlight
 syntax on
 
+" Bubble single lines
+nnoremap <silent> <C-Up>   :move-2<CR>==
+nnoremap <silent> <C-Down> :move+<CR>==
+" Bubble multiple lines
+xnoremap <silent> <C-Up>   :move-2<CR>gv=gv
+xnoremap <silent> <C-Down> :move'>+<CR>gv=gv
 

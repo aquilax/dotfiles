@@ -23,6 +23,7 @@ Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Bundle 'zah/nimrod.vim'
+Bundle 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -22,6 +22,7 @@ Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Bundle 'wakatime/vim-wakatime'
 Bundle 'zah/nimrod.vim'
 Bundle 'wakatime/vim-wakatime'
 
@@ -64,3 +65,6 @@ nnoremap <silent> <C-Down> :move+<CR>==
 xnoremap <silent> <C-Up>   :move-2<CR>gv=gv
 xnoremap <silent> <C-Down> :move'>+<CR>gv=gv
 
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1

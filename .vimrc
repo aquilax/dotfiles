@@ -24,7 +24,6 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Bundle 'wakatime/vim-wakatime'
 Bundle 'zah/nimrod.vim'
-Bundle 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

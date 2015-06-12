@@ -22,7 +22,6 @@ Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Bundle 'wakatime/vim-wakatime'
 Bundle 'zah/nimrod.vim'
 
 " All of your Plugins must be added before the following line

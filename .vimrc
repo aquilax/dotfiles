@@ -29,9 +29,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " theme
-try
-  colorscheme harlequin
-endtry
+silent! colorscheme harlequin
 
 " open ctrlp with .. Ctrl-P
 let g:ctrlp_map = '<c-p>'

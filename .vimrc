@@ -24,6 +24,7 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Bundle 'wakatime/vim-wakatime'
 Bundle 'zah/nimrod.vim'
+Plugin 'https://github.com/majutsushi/tagbar.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +41,9 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " open Nerd Tree with F2
 map <F2> :NERDTreeToggle<CR>
+
+" open ctags with F8
+nmap <F8> :TagbarToggle<CR>
 
 " enable modeline
 set modeline

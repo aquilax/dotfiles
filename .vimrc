@@ -22,7 +22,6 @@ Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Bundle 'wakatime/vim-wakatime'
 Bundle 'zah/nimrod.vim'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 
@@ -31,9 +30,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " theme
-try
-  colorscheme harlequin
-endtry
+silent! colorscheme harlequin
 
 " open ctrlp with .. Ctrl-P
 let g:ctrlp_map = '<c-p>'

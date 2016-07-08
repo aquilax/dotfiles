@@ -24,6 +24,7 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Bundle 'zah/nimrod.vim'
 Plugin 'https://github.com/majutsushi/tagbar.git'
+Plugin 'https://github.com/kshenoy/vim-signature'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -25,6 +25,7 @@ Plugin 'fatih/vim-go'
 Bundle 'zah/nimrod.vim'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kshenoy/vim-signature'
+Plugin 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,3 +70,6 @@ xnoremap <silent> <C-Down> :move'>+<CR>gv=gv
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
+
+" vimwiki home path
+let g:vimwiki_list = [{'path': '~/ledger/vimwiki/'}]

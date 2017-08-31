@@ -69,3 +69,6 @@ xnoremap <silent> <C-Down> :move'>+<CR>gv=gv
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
+
+" add 5 rows margin when scrolling                                             
+set scrolloff=5 

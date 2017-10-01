@@ -73,3 +73,5 @@ set colorcolumn=+1
 
 " vimwiki home path
 let g:vimwiki_list = [{'path': '~/ledger/vimwiki/'}]
+" add 5 rows margin when scrolling                                             
+set scrolloff=5 

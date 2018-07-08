@@ -2,7 +2,9 @@ set nocompatible
 filetype off
 
 " 256 Colors
-set t_Co=256
+if !has('gui_running')
+  set t_Co=256
+endif
 
 " some cyrillic mappings
 set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi
@@ -26,6 +28,9 @@ Bundle 'zah/nimrod.vim'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kshenoy/vim-signature'
 Plugin 'vimwiki/vimwiki'
+Plugin 'https://github.com/jceb/vim-orgmode'
+Plugin 'https://github.com/tpope/vim-speeddating'
+Plugin 'https://github.com/freitass/todo.txt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

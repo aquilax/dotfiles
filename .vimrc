@@ -73,8 +73,9 @@ xnoremap <silent> <C-Up>   :move-2<CR>gv=gv
 xnoremap <silent> <C-Down> :move'>+<CR>gv=gv
 
 " Make it obvious where 80 characters is
-set textwidth=80
 set colorcolumn=+1
+set textwidth=0 
+set wrapmargin=0
 
 " vimwiki home path
 let g:vimwiki_list = [{'path': '~/ledger/vimwiki/'}]

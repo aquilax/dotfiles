@@ -24,13 +24,16 @@ Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Bundle 'zah/nimrod.vim'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kshenoy/vim-signature'
 Plugin 'vimwiki/vimwiki'
-Plugin 'https://github.com/jceb/vim-orgmode'
 Plugin 'https://github.com/tpope/vim-speeddating'
 Plugin 'https://github.com/freitass/todo.txt-vim'
+Plugin 'https://github.com/lifepillar/vim-mucomplete.git'
+Plugin 'https://github.com/mechatroner/rainbow_csv'
+Plugin 'https://github.com/tpope/vim-sensible'
+Plugin 'https://github.com/ajh17/VimCompletesMe'
+Plugin 'sheerun/vim-polyglot'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,6 +81,15 @@ set textwidth=0
 set wrapmargin=0
 
 " vimwiki home path
-let g:vimwiki_list = [{'path': '~/ledger/vimwiki/'}]
+let g:vimwiki_list = [{'path': '~/ledger/vimwiki/',
+                     \ 'syntax': 'markdown', 'ext': '.md'}]
+
 " add 5 rows margin when scrolling                                             
 set scrolloff=5 
+
+set wildmenu
+
+" vim-mucomplete
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c 

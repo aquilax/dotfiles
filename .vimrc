@@ -20,7 +20,6 @@ Plugin 'git://github.com/scrooloose/syntastic.git'
 Plugin 'git://github.com/bling/vim-airline.git'
 Plugin 'git://github.com/nielsmadan/harlequin.git'
 Plugin 'git://github.com/editorconfig/editorconfig-vim.git'
-Plugin 'git://github.com/vim-scripts/ledger.vim.git'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
@@ -34,6 +33,7 @@ Plugin 'https://github.com/mechatroner/rainbow_csv'
 Plugin 'https://github.com/tpope/vim-sensible'
 Plugin 'https://github.com/ajh17/VimCompletesMe'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'https://github.com/ledger/vim-ledger'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,3 +93,4 @@ set wildmenu
 set completeopt+=menuone
 set completeopt+=noselect
 set shortmess+=c 
+

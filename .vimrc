@@ -94,3 +94,9 @@ set completeopt+=menuone
 set completeopt+=noselect
 set shortmess+=c 
 
+" enforce ledger
+let g:ledger_bin = 'ledger'
+
+" Insert current timestamp
+nmap <C-l> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
+imap <C-l> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>

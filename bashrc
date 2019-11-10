@@ -19,6 +19,12 @@ function weather {
   curl -s wttr.in/$1
 }
 
+# WeatherV2
+function weather2 {
+  curl -s wttr.in/$1?format=v2
+}
+
+
 # Cheatsheet
 function cheat() {
   curl cht.sh/$1

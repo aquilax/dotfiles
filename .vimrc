@@ -34,6 +34,7 @@ Plugin 'https://github.com/tpope/vim-sensible'
 Plugin 'https://github.com/ajh17/VimCompletesMe'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'https://github.com/ledger/vim-ledger'
+Plugin 'https://github.com/jkramer/vim-checkbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,6 +55,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " enable modeline
 set modeline
+set modelineexpr
 
 " Highlight col 80+
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929

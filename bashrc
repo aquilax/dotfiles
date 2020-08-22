@@ -1,5 +1,5 @@
 # Users commands
-export PATH="$PATH":"~/bin"
+export PATH="$PATH":"~/bin:~/go/bin"
 
 # dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

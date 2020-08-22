@@ -14,10 +14,25 @@ alias vimdiary='vim -c VimwikiMakeDiaryNote'
 # oauth
 export OATHKEYFILE="$HOME/ledger/oauthKeys"
 
+# Extend history
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+
 # Save history on every command
 export PROMPT_COMMAND='history -a'
 
+# pass storage
 export PASSWORD_STORE_DIR="$HOME/ledger/pass"
+
+# Hranoprovod
+export HR_DATABASE="$HOME/ledger/food.yaml"
+export HR_LOGFILE="$HOME/ledger/log.yaml"
+
+# Navi
+export NAVI_PATH="/data/app/navi/cheats:/home/aquilax/ledger/cheats"
+
+# GTK Warning messages
+export NO_AT_BRIDGE=1
 
 # Weather
 function weather {
@@ -28,7 +43,6 @@ function weather {
 function weather2 {
   curl -s "wttr.in/$1?format=v2"
 }
-
 
 # Cheatsheet
 function cheat {
@@ -41,4 +55,3 @@ function magnet-info {
   aria2c --bt-metadata-only=true --bt-save-metadata=true -q "$1"
   aria2c "$hash.torrent" -S
 }
-

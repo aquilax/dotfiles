@@ -15,7 +15,7 @@ alias vimwiki='vim -c VimwikiIndex'
 alias vimdiary='vim -c VimwikiMakeDiaryNote'
 
 # oauth
-export OATHKEYFILE="$HOME/ledger/oauthKeys"
+export OATHKEYFILE="$HOME/ledger/oauthKeys.pbkdf2"
 
 # Extend history
 HISTSIZE=1000000

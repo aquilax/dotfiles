@@ -6,6 +6,8 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+set termguicolors
+
 " some cyrillic mappings
 set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi
 
@@ -20,28 +22,33 @@ Plugin 'git://github.com/scrooloose/syntastic.git'
 Plugin 'git://github.com/bling/vim-airline.git'
 Plugin 'git://github.com/nielsmadan/harlequin.git'
 Plugin 'git://github.com/editorconfig/editorconfig-vim.git'
-Plugin 'https://github.com/vim-scripts/cream-showinvisibles'
+Plugin 'https://github.com/vim-scripts/cream-showinvisibles' " Uses F4 to toggle invisible characters
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Plugin 'https://github.com/majutsushi/tagbar.git'
-Plugin 'https://github.com/kshenoy/vim-signature'
+Plugin 'https://github.com/preservim/tagbar'
 Plugin 'vimwiki/vimwiki'
-Plugin 'https://github.com/tpope/vim-speeddating'
 Plugin 'https://github.com/freitass/todo.txt-vim'
 Plugin 'https://github.com/lifepillar/vim-mucomplete.git'
 Plugin 'https://github.com/mechatroner/rainbow_csv'
 Plugin 'https://github.com/tpope/vim-sensible'
-Plugin 'https://github.com/ajh17/VimCompletesMe'
+" Plugin 'https://github.com/ajh17/VimCompletesMe' " disablen in favor of mucompleteme
 Plugin 'sheerun/vim-polyglot'
 Plugin 'https://github.com/ledger/vim-ledger'
 Plugin 'https://github.com/jkramer/vim-checkbox'
+Plugin 'https://github.com/morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " theme
-silent! colorscheme harlequin
+
+" harlequin
+" silent! colorscheme harlequin
+
+" gruvbox
+silent! colorscheme gruvbox
+set background=dark    " Setting dark mode
 
 " open ctrlp with .. Ctrl-P
 let g:ctrlp_map = '<c-p>'
@@ -89,7 +96,9 @@ let g:vimwiki_list = [{'path': '~/ledger/vimwiki/',
 " add 5 rows margin when scrolling                                             
 set scrolloff=5 
 
+" Eneble wildmenu
 set wildmenu
+set wildmode=longest:full,full
 
 " vim-mucomplete
 set completeopt+=menuone
@@ -99,6 +108,6 @@ set shortmess+=c
 " enforce ledger
 let g:ledger_bin = 'ledger'
 
-" Insert current timestamp
+" Insert current timestamp (Ctrl-l)
 nmap <C-l> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
 imap <C-l> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>

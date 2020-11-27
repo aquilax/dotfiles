@@ -14,6 +14,10 @@ alias vimwiki='vim -c VimwikiIndex'
 # Add entry in vimwiki for today
 alias vimdiary='vim -c VimwikiMakeDiaryNote'
 
+# todo.txt
+alias vimtodo='vim ~/ledger/todo/todo.txt'
+
+
 # oauth
 export OATHKEYFILE="$HOME/ledger/oauthKeys.pbkdf2"
 
@@ -36,6 +40,9 @@ export NAVI_PATH="/data/app/navi/cheats:/home/aquilax/ledger/cheats"
 
 # GTK Warning messages
 export NO_AT_BRIDGE=1
+
+# TODO.sh config file
+export TODOTXT_CFG_FILE="$HOME/ledger/todo/config"
 
 # Weather
 function weather {

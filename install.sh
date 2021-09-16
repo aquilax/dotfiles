@@ -13,6 +13,7 @@ git config --global user.name "aquilax"
 git config --global user.email "aquilax@gmail.com"
 git config --global color.ui true
 git config --global push.default current
+git config --global init.defaultBranch master
 
 #Vim setup
 

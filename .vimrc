@@ -9,7 +9,7 @@ endif
 set termguicolors
 
 " some cyrillic mappings
-set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi
+set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi,рr
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -31,11 +31,11 @@ Plugin 'https://github.com/freitass/todo.txt-vim'
 Plugin 'https://github.com/lifepillar/vim-mucomplete.git'
 Plugin 'https://github.com/mechatroner/rainbow_csv'
 Plugin 'https://github.com/tpope/vim-sensible'
-" Plugin 'https://github.com/ajh17/VimCompletesMe' " disablen in favor of mucompleteme
+" Plugin 'https://github.com/ajh17/VimCompletesMe' " disabled in favor of mucompleteme
 Plugin 'sheerun/vim-polyglot'
 Plugin 'https://github.com/ledger/vim-ledger'
 Plugin 'https://github.com/jkramer/vim-checkbox'
-Plugin 'https://github.com/morhetz/gruvbox'
+Plugin 'https://github.com/lifepillar/vim-gruvbox8.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,7 +47,7 @@ filetype plugin indent on    " required
 " silent! colorscheme harlequin
 
 " gruvbox
-silent! colorscheme gruvbox
+silent! colorscheme gruvbox8
 set background=dark    " Setting dark mode
 
 " open ctrlp with .. Ctrl-P
@@ -111,3 +111,6 @@ let g:ledger_bin = 'ledger'
 " Insert current timestamp (Ctrl-l)
 nmap <C-l> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
 imap <C-l> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+
+" Open popup with hranoprovod summary for today
+map <C-h> :call popup_notification(systemlist('hranoprovod-cli --no-color summary today'), {'pos': 'center'})<CR>

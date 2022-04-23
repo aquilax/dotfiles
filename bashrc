@@ -17,6 +17,8 @@ alias vimdiary='vim -c VimwikiMakeDiaryNote'
 # todo.txt
 alias vimtodo='vim ~/ledger/todo/todo.txt'
 
+# Flip a coin
+alias coindecide='if (( RANDOM % 2 == 0 )); then echo Yes; else echo No; fi'
 
 # oauth
 export OATHKEYFILE="$HOME/ledger/oauthKeys.pbkdf2"
@@ -40,7 +42,6 @@ export HR_DATABASE="$HOME/ledger/food.yaml"
 export HR_LOGFILE="$HOME/ledger/log.yaml"
 
 # Remind file
-
 export DOTREMINDERS="$HOME/ledger/remind.rem"
 
 # Navi
@@ -77,3 +78,9 @@ function magnet-info {
 export PATH="$HOME/.basher/bin:$PATH"
 eval "$(basher init - bash)" # replace `bash` with `zsh` if you use zsh
 
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# Merki
+export MERKI_FILE="$HOME/ledger/health.log"

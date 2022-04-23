@@ -15,27 +15,30 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+Plugin 'https://github.com/VundleVim/Vundle.vim'
 
-Plugin 'git://github.com/scrooloose/nerdtree.git'
-Plugin 'git://github.com/scrooloose/syntastic.git'
-Plugin 'git://github.com/bling/vim-airline.git'
-Plugin 'git://github.com/nielsmadan/harlequin.git'
-Plugin 'git://github.com/editorconfig/editorconfig-vim.git'
+" NerdTree - mapped to F2
+Plugin 'https://github.com/scrooloose/nerdtree'
+Plugin 'https://github.com/scrooloose/syntastic'
+Plugin 'https://github.com/bling/vim-airline'
+Plugin 'https://github.com/nielsmadan/harlequin'
+Plugin 'https://github.com/editorconfig/editorconfig-vim'
 Plugin 'https://github.com/vim-scripts/cream-showinvisibles' " Uses F4 to toggle invisible characters
 Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'fatih/vim-go'
+Plugin 'https://github.com/fatih/vim-go'
 Plugin 'https://github.com/preservim/tagbar'
-Plugin 'vimwiki/vimwiki'
+Plugin 'https://github.com/vimwiki/vimwiki'
 Plugin 'https://github.com/freitass/todo.txt-vim'
-Plugin 'https://github.com/lifepillar/vim-mucomplete.git'
+Plugin 'https://github.com/lifepillar/vim-mucomplete'
 Plugin 'https://github.com/mechatroner/rainbow_csv'
 Plugin 'https://github.com/tpope/vim-sensible'
-" Plugin 'https://github.com/ajh17/VimCompletesMe' " disabled in favor of mucompleteme
 Plugin 'sheerun/vim-polyglot'
 Plugin 'https://github.com/ledger/vim-ledger'
 Plugin 'https://github.com/jkramer/vim-checkbox'
 Plugin 'https://github.com/lifepillar/vim-gruvbox8.git'
+
+" Janet
+"Plugin 'https://github.com/janet-lang/janet.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -114,3 +117,4 @@ imap <C-l> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " Open popup with hranoprovod summary for today
 map <C-h> :call popup_notification(systemlist('hranoprovod-cli --no-color summary today'), {'pos': 'center'})<CR>
+

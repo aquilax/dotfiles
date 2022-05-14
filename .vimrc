@@ -12,37 +12,39 @@ set termguicolors
 set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi,рr
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
+" call vundle#begin()
 " let Vundle manage Vundle
-Plugin 'https://github.com/VundleVim/Vundle.vim'
+" Plugin 'https://github.com/VundleVim/Vundle.vim'
 
-" NerdTree - mapped to F2
-Plugin 'https://github.com/scrooloose/nerdtree'
-Plugin 'https://github.com/scrooloose/syntastic'
-Plugin 'https://github.com/bling/vim-airline'
-Plugin 'https://github.com/nielsmadan/harlequin'
-Plugin 'https://github.com/editorconfig/editorconfig-vim'
-Plugin 'https://github.com/vim-scripts/cream-showinvisibles' " Uses F4 to toggle invisible characters
-Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'https://github.com/fatih/vim-go'
-Plugin 'https://github.com/preservim/tagbar'
-Plugin 'https://github.com/vimwiki/vimwiki'
-Plugin 'https://github.com/freitass/todo.txt-vim'
-Plugin 'https://github.com/lifepillar/vim-mucomplete'
-Plugin 'https://github.com/mechatroner/rainbow_csv'
-Plugin 'https://github.com/tpope/vim-sensible'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'https://github.com/ledger/vim-ledger'
-Plugin 'https://github.com/jkramer/vim-checkbox'
-Plugin 'https://github.com/lifepillar/vim-gruvbox8.git'
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " NerdTree - mapped to F2
+Plug 'https://github.com/scrooloose/syntastic'
+Plug 'https://github.com/bling/vim-airline'
+Plug 'https://github.com/nielsmadan/harlequin'
+Plug 'https://github.com/editorconfig/editorconfig-vim'
+Plug 'https://github.com/vim-scripts/cream-showinvisibles' " Uses F4 to toggle invisible characters
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/fatih/vim-go'
+Plug 'https://github.com/preservim/tagbar'
+Plug 'https://github.com/vimwiki/vimwiki'
+Plug 'https://github.com/freitass/todo.txt-vim'
+Plug 'https://github.com/lifepillar/vim-mucomplete'
+Plug 'https://github.com/mechatroner/rainbow_csv'
+Plug 'https://github.com/tpope/vim-sensible'
+Plug 'sheerun/vim-polyglot'
+Plug 'https://github.com/ledger/vim-ledger'
+Plug 'https://github.com/jkramer/vim-checkbox'
+Plug 'https://github.com/lifepillar/vim-gruvbox8.git'
 
 " Janet
 "Plugin 'https://github.com/janet-lang/janet.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
+" call vundle#end()            " required
+"filetype plugin indent on    " required
 
 " theme
 

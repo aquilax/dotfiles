@@ -20,6 +20,12 @@ alias vimtodo='vim ~/ledger/todo/todo.txt'
 # Flip a coin
 alias coindecide='if (( RANDOM % 2 == 0 )); then echo Yes; else echo No; fi'
 
+# fzf preview
+alias fzfp="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"
+
+# fzf preview to vim
+alias fzfvim='vim "$(fzfp)"'
+
 # oauth
 export OATHKEYFILE="$HOME/ledger/oauthKeys.pbkdf2"
 

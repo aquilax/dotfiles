@@ -13,10 +13,6 @@ set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi,рr
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" call vundle#begin()
-" let Vundle manage Vundle
-" Plugin 'https://github.com/VundleVim/Vundle.vim'
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " NerdTree - mapped to F2
@@ -33,31 +29,36 @@ Plug 'https://github.com/freitass/todo.txt-vim'
 Plug 'https://github.com/lifepillar/vim-mucomplete'
 Plug 'https://github.com/mechatroner/rainbow_csv'
 Plug 'https://github.com/tpope/vim-sensible'
-Plug 'sheerun/vim-polyglot'
+Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/ledger/vim-ledger'
 Plug 'https://github.com/jkramer/vim-checkbox'
 Plug 'https://github.com/lifepillar/vim-gruvbox8.git'
+Plug 'https://github.com/luizribeiro/vim-cooklang', { 'for': 'cook' }
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'https://github.com/tpope/vim-fugitive'
 
 " Janet
-"Plugin 'https://github.com/janet-lang/janet.vim'
+"Plug 'https://github.com/janet-lang/janet.vim'
+
+" nvim specific
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " All of your Plugins must be added before the following line
 call plug#end()
-" call vundle#end()            " required
-"filetype plugin indent on    " required
 
 " theme
 
-" harlequin
-" silent! colorscheme harlequin
-
 " gruvbox
-silent! colorscheme gruvbox8
+silent! colorscheme gruvbox8_hard
 set background=dark    " Setting dark mode
 
 " open ctrlp with .. Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Open FZF with Ctrl-F
+nmap <C-F> :Files<CR>
 
 " open Nerd Tree with F2
 map <F2> :NERDTreeToggle<CR>

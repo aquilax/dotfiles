@@ -1,17 +1,25 @@
 set nocompatible
 filetype off
 
+set mouse=
+if !has('nvim')
+  set ttymouse=
+endif
+
 " 256 Colors
 if !has('gui_running')
   set t_Co=256
 endif
 
+" FIXME: vim-ledger quickfix https://github.com/ledger/vim-ledger/issues/143
+let g:ledger_is_hledger=0
+let b:is_hledger=0
+let s:line_comment_chars=";"
+
 set termguicolors
 
 " some cyrillic mappings
 set langmap =ъy,оo,пp,дd,гg,ГG,аa,АA,мm,уu,иi,рr
-
-set rtp+=~/.vim/bundle/Vundle.vim
 
 call plug#begin('~/.vim/plugged')
 
@@ -39,7 +47,7 @@ Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/tpope/vim-fugitive'
 
 " Janet
-"Plug 'https://github.com/janet-lang/janet.vim'
+" Plug 'https://github.com/janet-lang/janet.vim'
 
 " nvim specific
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

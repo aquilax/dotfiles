@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 POKOY_CONFIG=$HOME/.config/pokoy
 
@@ -16,9 +16,6 @@ git config --global push.default current
 git config --global init.defaultBranch master
 
 #Vim setup
-
-# [DEPRECATED: using vim-plug instead] Install Vundle 
-# git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install vim-plug 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

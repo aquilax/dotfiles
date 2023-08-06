@@ -4,9 +4,9 @@ POKOY_CONFIG=$HOME/.config/pokoy
 
 # .vimrc
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
-ln -s "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
-ln -s "$HOME/dotfiles/.taskrc" "$HOME/.taskrc"
-ln -s "$HOME/dotfiles/.screenrc" "$HOME/.screenrc"
+ln -s "$HOME/dotfiles/.tmux.conf" "$HOME/.config/tmux/tmux.conf"
+ln -s "$HOME/dotfiles/.taskrc" "$HOME/.config/task/taskrc"
+ln -s "$HOME/dotfiles/.screenrc" "$HOME/.config/screen/screenrc"
 
 #Git setup
 git config --global user.name "aquilax"

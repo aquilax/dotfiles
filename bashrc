@@ -6,6 +6,32 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+# === https://github.com/b3nj5m1n/xdg-ninja
+
+export ANDROID_HOME="$XDG_DATA_HOME"/android # .android
+export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf # .asdf
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker # .docker
+export ELM_HOME="$XDG_CONFIG_HOME"/elm # .elm
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem # .gem/specs
+export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc # .screenrc
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle # .gradle
+export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH" # .julia
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history # .lesshst
+export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer # .mplayer
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc # .npmrc
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages # .nuget
+export NVM_DIR="$XDG_DATA_HOME"/nvm # .nvm
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java # .java
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint # .pylint.d
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle # .bundle
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle # .bundle
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle # .bundle
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup # .rustup
+export SQLITE_HISTORY="$XDG_STATE_HOME"/sqlite/history # .sqlite_history
+export W3M_DIR="$XDG_DATA_HOME"/w3m # .w3m
+
+# == end xdg-ninja
+
 # Users commands
 export PATH="$PATH":"~/bin:~/go/bin"
 
@@ -89,12 +115,14 @@ function magnet-info {
   aria2c "$hash.torrent" -S
 }
 
-export PATH="$HOME/.basher/bin:$PATH"
-eval "$(basher init - bash)" # replace `bash` with `zsh` if you use zsh
-
 # asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. $ASDF_DATA_DIR/asdf.sh
+. $ASDF_DATA_DIR/completions/asdf.bash
 
 # Merki
 export MERKI_FILE="$HOME/ledger/health.log"
+
+# Flyctl
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+

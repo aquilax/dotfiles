@@ -45,7 +45,7 @@ Plug 'https://github.com/luizribeiro/vim-cooklang', { 'for': 'cook' }
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/tpope/vim-fugitive'
-
+Plug 'https://github.com/axvr/zepl.vim'
 " Janet
 " Plug 'https://github.com/janet-lang/janet.vim'
 

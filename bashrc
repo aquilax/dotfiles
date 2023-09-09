@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # XDG Base directories
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 
@@ -29,14 +31,13 @@ export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle # .bundle
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup # .rustup
 export SQLITE_HISTORY="$XDG_STATE_HOME"/sqlite/history # .sqlite_history
 export W3M_DIR="$XDG_DATA_HOME"/w3m # .w3m
-
+export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime" # .wakatime*
+export OPAMROOT="$XDG_DATA_HOME/opam"
+export FONTCONFIG_PATH=/etc/fonts # Fontconfig error: Cannot load default config file: No such file: (null)
 # == end xdg-ninja
 
-# Users commands
-export PATH="$PATH":"~/bin:~/go/bin"
-
 # dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -59,6 +60,10 @@ alias fzfp="fzf --preview 'batcat --style=numbers --color=always --line-range :5
 
 # fzf preview to vim
 alias fzfvim='vim "$(fzfp)"'
+
+# Go
+GOPATHS="$(go env GOBIN):$(go env GOPATH)/bin"
+export PATH="$PATH:$GOPATHS"
 
 # oauth
 export OATHKEYFILE="$HOME/ledger/oauthKeys.pbkdf2"
@@ -116,8 +121,8 @@ function magnet-info {
 }
 
 # asdf
-. $ASDF_DATA_DIR/asdf.sh
-. $ASDF_DATA_DIR/completions/asdf.bash
+. "$ASDF_DATA_DIR/asdf.sh"
+. "$ASDF_DATA_DIR/completions/asdf.bash"
 
 # Merki
 export MERKI_FILE="$HOME/ledger/health.log"
